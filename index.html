@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Grunt Presentation</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="a/css/presentation.css">
+
+	</head>
+<body>
+
+
+<div class="slide" data-slide="1">
+	<div class="container">
+
+		<h1>GRUNT</h1>
+
+		<img src="a/slides/imgs/grunt-logo.png" />
+
+	</div>
+</div>
+
+
+<div class="slide hide" data-slide="2">
+	<div class="container">
+
+		<h1>What is GRUNT</h1>
+
+		<ul>
+			<li>Grunt is a task-based command line build tool for JavaScript projects</li>
+			<li>Runs on node.js</li>
+			<li>Uses NPM (Node Package Manager) to extended the functionality</li>
+		</ul>
+
+		<h2>Installing GRUNT</h2>
+
+		<ul>
+			<li>You use the NPM and install it <strong>g</strong>lobally</li>
+			<li class="code"><code>npm install -g grunt-cli</code></li>
+		</ul>
+
+		<h2>Using GRUNT</h2>
+
+		<ul>
+			<li>From the command line : <code>grunt</code> or Windows <code>grunt.cmd</code></li>
+		</ul>
+
+	</div>
+</div>
+
+
+<div class="slide hide" data-slide="3">
+	<div class="container">
+
+		<h1>A grunt Project</h1>
+
+		<ul>
+			<li><strong>package.json</strong> - Used by NPM, store's metadata for projects published as npm modules. This file is used by grunt to list the grunt dependencies needed to run the gruntfile.js on your project. </li>
+			<li><strong>gruntfile.js</strong> - Used to configure or define tasks and load Grunt plugins</li>
+			<li>Both these files should live in the root of your project</li>
+			<li><strong>Note:</strong> Where these files are located becomes the root of the grunt project, config in the gruntfile.js is relative to where it's located</li>
+		</ul>
+
+	</div>
+</div>
+
+
+<div class="slide hide" data-slide="4">
+	<div class="container">
+
+		<h1>package.json</h1>
+
+		<ul>
+			<li>Can use <code>npm init</code> for automation</li>
+			<li>You could start with a simple file like:</li>
+		</ul>
+
+<pre>
+{
+  "name": "my-project-name",
+  "version": "0.1.0",
+}
+</pre>
+
+		<ul>
+			<li>Run <code>npm install</code> first, when dealing with an existing project</li>
+			<li>install gruntplugins using <code>npm install < module > --save-dev</code> - adds the following structure to package.json</li>
+		</ul>
+
+<pre>
+  "devDependencies": {
+    "grunt": "0.4.0rc7"
+  }
+</pre>
+
+	</div>
+</div>
+
+
+<div class="slide hide" data-slide="5">
+	<div class="container">
+
+		<h1>gruntfile.js - The 'gruntfile'</h1>
+
+		<ul>
+			<li>Generally speaking it's located in the root of your project, along side the package.json file</li>
+			<li>If you try to run grunt and a gruntfile.js file is not found in the current directory, it will keep looking up the
+					folder tree until one is found</li>
+			<li>Contains the following parts
+				<ul>
+					<li>The "wrapper" function</li>
+					<li>Project and task configuration</li>
+					<li>Loading grunt plugins and tasks</li>
+					<li>Custom tasks</li>
+				</ul>
+		</ul>
+
+	</div>
+</div>
+
+
+<div class="slide hide" data-slide="6">
+	<div class="container">
+
+		<h1>gruntfile.js - CODE</h1>
+
+		<pre>
+module.exports = function(grunt) {
+	grunt.initConfig({
+&nbsp;
+		pkg: grunt.file.readJSON('package.json'),
+&nbsp;
+		uglify: {
+    	options: {
+      	banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+    	},
+			build: {
+      	src: 'src/<%= pkg.name %>.js',
+      	dest: 'src/<%= pkg.name %>.min.js'
+      }
+    }
+
+	});
+&nbsp;
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+&nbsp;
+	grunt.registerTask('default', ['uglify']);
+&nbsp;
+});</pre>
+
+	</div>
+</div>
+
+
+<div class="slide hide" data-slide="7">
+	<div class="container">
+
+		<h1>DEMO</h1>
+
+		<ul>
+			<li>Going show you a demo of starting a project by scratch</li>
+			<li>Then how someone may use an existing project, eg. After checking out from SVN, or Git</li>
+		</ul>
+
+	</div>
+</div>
+
+
+<div class="slide hide" data-slide="8">
+	<div class="container">
+
+		<h1>THE END</h1>
+
+		<img src="a/slides/imgs/bttf-flame-trails.jpg" />
+
+	</div>
+</div>
+
+
+<div id="progress" class="progress"></div>
+
+<script type="text/javascript" src="a/js/presentation.js"></script>
+
+</body>
+</html>

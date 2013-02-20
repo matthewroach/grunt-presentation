@@ -1,0 +1,140 @@
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	color: rgb(73,73,73);
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+}
+
+.slide {
+	background: rgb(255,255,255);
+	/*height: 80%;*/
+	padding: 5% 10%;
+	position: absolute;
+	text-align: center;
+	width: 80%;
+}
+
+
+.progress {
+	background: rgb(99,74,145);
+	bottom: 0;
+	position: fixed;
+	height: 7px;
+}
+
+
+
+.hide {
+	display: none;
+}
+
+
+
+
+
+/* --- Content Formatting --- */
+
+h1, h2, h3, h4, h5, h6, p {
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: 900;
+	margin: 0 0 30px 0;
+}
+
+h2 {
+	font-size: 2em;
+	font-weight: 800;
+	margin: 30px 0;
+}
+
+strong {
+	color: rgb(50,50,50);
+	font-weight: 900;
+}
+
+ul {
+	line-height: 2.3em;
+	text-align: left;
+}
+li ul {
+	margin: 0 0 0 2em;
+}
+
+.code {
+	list-style: none;
+}
+
+
+code, pre {
+	background: rgb(230,230,230);
+	border: 1px solid rgb(180,180,180);
+	font-family: Courier;
+	padding: 5px 10px;
+	text-align: left;
+	word-wrap: break-word;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------- ide-eclipse Styles ---------*/
+.sh_ide-eclipse{background:none; padding:0; margin:0; border:0 none;}.sh_ide-eclipse .sh_sourceCode{background-color:#fff;color:#000;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_keyword{color:#7f0055;font-weight:bold;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_type{color:#7f0055;font-weight:bold;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_string{color:#00f;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_regexp{color:#00f;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_specialchar{color:#00f;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_comment{color:#717ab3;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_number{color:#000;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_preproc{color:#3f5fbf;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_function{color:#000;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_url{color:#00f;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_date{color:#7f0055;font-weight:bold;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_time{color:#7f0055;font-weight:bold;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_file{color:#7f0055;font-weight:bold;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_ip{color:#00f;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_name{color:#00f;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_variable{color:#7f0055;font-weight:bold;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_oldfile{color:#00f;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_newfile{color:#00f;font-weight:normal;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_difflines{color:#7f0055;font-weight:bold;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_selector{color:#7f0055;font-weight:bold;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_property{color:#7f0055;font-weight:bold;font-style:normal;}.sh_ide-eclipse .sh_sourceCode .sh_value{color:#00f;font-weight:normal;font-style:normal;}
+
+/*-------- Snippet Base Styles ----------*/
+.snippet-wrap {position:relative; font-size: 18px;}
+*:first-child+html .snippet-wrap {display:inline-block;}
+* html .snippet-wrap {display:inline-block;}
+.snippet-reveal{text-decoration:underline;}
+.snippet-wrap .snippet-menu, .snippet-wrap .snippet-hide {position:absolute; top:10px; right:15px; font-size:.9em;z-index:1;background-color:transparent;}
+.snippet-wrap .snippet-hide {top:auto; bottom:10px;}
+*:first-child+html .snippet-wrap .snippet-hide {bottom:25px;}
+* html .snippet-wrap .snippet-hide {bottom:25px;}
+.snippet-wrap .snippet-menu pre, .snippet-wrap .snippet-hide pre {background-color:transparent; margin:0; padding:0;}
+.snippet-wrap .snippet-menu a, .snippet-wrap .snippet-hide a {padding:0 5px; text-decoration:underline;}
+/*.snippet-wrap pre.sh_sourceCode{padding:1em;line-height:1.8em;overflow:auto;position:relative;
+-moz-border-radius:15px;
+-webkit-border-radius:15px;
+border-radius:15px;
+box-shadow: 2px 2px 5px #000;
+-moz-box-shadow: 2px 2px 5px #000;
+-webkit-box-shadow: 2px 2px 5px #000;}*/
+.snippet-wrap pre.snippet-textonly {padding:2em;}
+*:first-child+html .snippet-wrap pre.snippet-formatted {padding:2em 1em;}
+* html .snippet-wrap pre.snippet-formatted {padding:2em 1em;}
+.snippet-reveal pre.sh_sourceCode {padding:.5em 1em; text-align:right;}
+/*.snippet-wrap .snippet-num li{padding-left:1.5em;}*/
+/*.snippet-wrap .snippet-no-num{list-style:none; padding:.6em 1em; margin:0;}*/
+.snippet-wrap .snippet-no-num li {list-style:none; line-height: 1.4; padding-left:0;}
+.snippet-wrap .snippet-num { padding-left:3em;}
+.snippet-wrap .snippet-num li {list-style:decimal-leading-zero outside none;}
+.snippet-wrap .snippet-no-num li.box {padding:0 6px; margin-left:-6px;}
+.snippet-wrap .snippet-num li.box {border:1px solid; list-style-position:inside; margin-left:-3em; padding-left:6px;}
+*:first-child+html .snippet-wrap .snippet-num li.box {margin-left:-2.4em;}
+* html .snippet-wrap .snippet-num li.box {margin-left:-2.4em;}
+.snippet-wrap li.box-top {border-width:1px 1px 0 !important;}
+.snippet-wrap li.box-bot {border-width:0 1px 1px !important;}
+.snippet-wrap li.box-mid {border-width:0 1px !important;}
+.snippet-wrap .snippet-num li .box-sp {width:18px; display:inline-block;}
+*:first-child+html .snippet-wrap .snippet-num li .box-sp {width:27px;}
+* html .snippet-wrap .snippet-num li .box-sp {width:27px;}
+.snippet-wrap .snippet-no-num li.box {border:1px solid;}
+.snippet-wrap .snippet-no-num li .box-sp {display:none;}
